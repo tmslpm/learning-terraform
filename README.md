@@ -7,7 +7,7 @@ and better understand the Terraform ecosystem.
 ## terraform cli
 - https://developer.hashicorp.com/terraform/tutorials/cli
 
-## digital cli
+## digital ocean cli
 - https://docs.digitalocean.com/reference/doctl/how-to/install/
 
 ### Scripts
