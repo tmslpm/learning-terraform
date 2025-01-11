@@ -8,13 +8,47 @@ https://docs.digitalocean.com/reference/doctl/how-to/install/
 1) Init workspace terraform
   - `terraform workspace new {$WORKSPACE_NAME_NAME$}`
   - `terraform workspace list`
-  ```workspace structure
+  
+  workspace structure:
+  ```
   ├── .terraform 
   ├── digitalocean_droplet.tf
   ├── digitalocean_firewall.tf
   ├── provider.tf
+  ├── terraform.tfvars
   └── terraform.tfstate.d
   ```
+
+  ```digitalocean_droplet.tf
+  resource "digitalocean_droplet" "do_droplet" { ... ... ... }
+  ```
+
+  ```digitalocean_firewall.tf
+  resource "digitalocean_firewall" "do_firewall" { ... ... ... }
+  ```
+
+  ```provider.tf
+  terraform {
+    required_providers {
+      digitalocean = {
+        source  = "digitalocean/digitalocean"
+        version = "2.15.0"
+      }
+    }
+  }
+
+  variable "do_token" {}
+
+  provider "digitalocean" {
+    token = var.do_token
+  }
+  ```
+
+  ```terraform.tfvars
+  do_token = "digital personnal api key"
+  ```
+  > .gitignore must ignore this file!
+
   - `terraform init`
 
 2) get droplet & firewall
