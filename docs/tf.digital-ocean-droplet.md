@@ -19,14 +19,17 @@ https://docs.digitalocean.com/reference/doctl/how-to/install/
   └── terraform.tfstate.d
   ```
 
+  **digitalocean_droplet.tf**
   ```digitalocean_droplet.tf
   resource "digitalocean_droplet" "do_droplet" { ... ... ... }
   ```
 
+  **digitalocean_firewall.tf**
   ```digitalocean_firewall.tf
   resource "digitalocean_firewall" "do_firewall" { ... ... ... }
   ```
 
+  **provider.tf**
   ```provider.tf
   terraform {
     required_providers {
@@ -44,6 +47,7 @@ https://docs.digitalocean.com/reference/doctl/how-to/install/
   }
   ```
 
+  **terraform.tfvars**
   ```terraform.tfvars
   do_token = "digital personnal api key"
   ```
