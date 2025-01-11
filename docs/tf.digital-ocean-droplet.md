@@ -2,10 +2,10 @@
 
 https://docs.digitalocean.com/reference/doctl/how-to/install/
 
-0) Authenticate to your digital ocean account
+## 0) Authenticate to your digital ocean account
   - `doctl auth init` 
 
-1) Init workspace terraform
+## 1) Init workspace terraform
   - `terraform workspace new {$WORKSPACE_NAME_NAME$}`
   - `terraform workspace list`
   
@@ -55,7 +55,7 @@ https://docs.digitalocean.com/reference/doctl/how-to/install/
 
   - `terraform init`
 
-2) get droplet & firewall
+## 2) get droplet & firewall
   - `doctl compute droplet list`
   - `doctl compute firewall list`
   - `terraform import digitalocean_droplet.do_droplet DROPLET_ID_TO_REPLACED`
