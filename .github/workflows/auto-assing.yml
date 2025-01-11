@@ -12,7 +12,7 @@ jobs:
       pull-requests: write
     steps:
       - name: "Auto-assign issue"
-        uses: pozil/auto-assign-issue@v1
+        uses: pozil/auto-assign-issue@c015a6a3f410f12f58255c3d085fd774312f7a2f
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: tmslpm
